@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 
 let marker;
 
-function followMe(pos) {
+const followMe = (pos) => {
     const lng = pos.coords.longitude;
     const lat = pos.coords.latitude;
 
