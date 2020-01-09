@@ -8,7 +8,10 @@ const map = new mapboxgl.Map({
 
 let marker;
 
-function followMe(lat, lng) {
+function followMe(pos) {
+    const lng = pos.coords.longitude;
+    const lat = pos.coords.latitude;
+
     map.easeTo({
         center: [lng, lat],
         zoom: 18
@@ -16,18 +19,12 @@ function followMe(lat, lng) {
     marker.setLngLat([lng, lat]);
 }
 
-function finnMeg() {
-    navigator.geolocation.watchPosition(position => {
-        followMe(position.coords.latitude, position.coords.longitude);
-    });
-}
-
 map.on("load", () => {
     marker = new mapboxgl.Marker();
     marker.setLngLat([8.309321, 61.641686]);
     marker.addTo(map);
     
-    finnMeg();
+    navigator.geolocation.watchPosition(followMe);
 
 })
 
