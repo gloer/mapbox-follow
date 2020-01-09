@@ -14,7 +14,7 @@ const followMe = (pos) => {
 
     map.easeTo({
         center: [lng, lat],
-        zoom: 18
+        zoom: 15
     })
     marker.setLngLat([lng, lat]);
 }
