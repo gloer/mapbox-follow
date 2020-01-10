@@ -50,13 +50,12 @@ const followMe = (pos) => {
     // Sjekker om vi er inne i et område
     const minpos = turf.point([lng, lat]);
 
-    for(const turfsted of mineSteder) {
+    mineSteder.map(turfsted => {
         const inni = turf.booleanPointInPolygon(minpos, turfsted);
         if(inni) {
             document.querySelector("#info").innerText = "Du er på " + turfsted.properties.name; 
         }
-    }
-
+    })
 
 }
 
