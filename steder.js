@@ -1,10 +1,10 @@
-const steder = {
+const steder =  {
     "type": "FeatureCollection",
     "features": [
       {
         "type": "Feature",
         "properties": {
-          "name": "jobben"
+          "name": "Karl Johans gate"
         },
         "geometry": {
           "type": "Polygon",
@@ -37,7 +37,7 @@ const steder = {
       {
         "type": "Feature",
         "properties": {
-          "name": "Karl Johans gate"
+          "name": "jobben"
         },
         "geometry": {
           "type": "Polygon",
