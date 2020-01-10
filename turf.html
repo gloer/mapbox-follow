@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Surf and Turf</title>
+</head>
+<body>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script>
+    
+    var pt = turf.point([-77, 44]);
+    var poly = turf.polygon([[
+        [-81, 41],
+        [-81, 47],
+        [-72, 47],
+        [-72, 41],
+        [-81, 41]
+    ]]);
+
+    const inni = turf.booleanPointInPolygon(pt, poly);
+    console.log(inni);
+
+    </script>
+</body>
+</html>
